@@ -19,7 +19,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 //Im making a change
-//This is in the test branch
 public class MainActivity extends Activity implements ActionBar.TabListener {
 
     /**
