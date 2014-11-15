@@ -19,15 +19,11 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 =======
 //Im making a change
 //This is in the test branch
 >>>>>>> parent of dfeb10a... Revert "branch test"
-=======
-//Im making a change
->>>>>>> parent of fb5c41b... Revert "Test"
 public class MainActivity extends Activity implements ActionBar.TabListener {
 
     /**
