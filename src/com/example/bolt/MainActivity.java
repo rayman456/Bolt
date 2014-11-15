@@ -18,12 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-<<<<<<< HEAD
 
-=======
-//Im making a change
-//This is in the test branch
->>>>>>> parent of dfeb10a... Revert "branch test"
 public class MainActivity extends Activity implements ActionBar.TabListener {
 
     /**
