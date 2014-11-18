@@ -1,5 +1,5 @@
 package com.example.bolt;
-
+/*jareus*/
 import java.util.Locale;
 
 import android.app.Activity;
