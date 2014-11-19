@@ -1,7 +1,5 @@
 package com.example.bolt;
-/*jareus is cool*/
 
-//Nick was here
 import java.util.Locale;
 
 import android.app.Activity;
