@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/android"
+    android:orientation="vertical"
+    android:padding="30dp" >
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30dp"
+        android:text="Welcome to Bolt!"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/loginInstructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Please enter username and password below to login to Bolt."
+        android:textColor="#ffffff"
+        android:textStyle="normal" />
+
+    <EditText
+        android:id="@+id/boltuser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:background="#ffffff"
+        android:ems="10"
+        android:hint="user@domain"
+        android:inputType="textEmailAddress"
+        android:paddingBottom="0dp" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/boltpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:background="#ffffff"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="password" />
+
+    <Button
+        android:id="@+id/loginbutton"
+        android:layout_width="97dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="230dp"
+        android:text="Log In"
+        android:textStyle="bold" />
+
+</LinearLayout>
