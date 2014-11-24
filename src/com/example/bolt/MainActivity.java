@@ -1,8 +1,6 @@
 package com.example.bolt;
-/*jareus is cool*/
-
-//Nick was here
 import java.util.Locale;
+
 
 import android.app.Activity;
 import android.app.ActionBar;
@@ -19,6 +17,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.EditText;
+import android.content.Intent;
+import android.widget.Button;
+import android.widget.Chronometer;
 
 
 public class MainActivity extends Activity implements ActionBar.TabListener {
@@ -37,6 +39,10 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
      * The {@link ViewPager} that will host the section contents.
      */
     ViewPager mViewPager;
+    
+    Button startChrono;
+    Button pauseChrono;
+    Chronometer chrono;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -182,6 +188,12 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             return rootView;
         }
+    }
+    
+    public void login(View view) {
+    	EditText username = (EditText)findViewById(R.id.boltuser);
+    	EditText password = (EditText)findViewById(R.id.boltpassword);
+    	//here the program should check to make sure the username/password match our records.
     }
 
 }
