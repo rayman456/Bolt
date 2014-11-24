@@ -50,9 +50,8 @@
 
     <Button
         android:id="@+id/loginbutton"
-        android:layout_width="97dp"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="230dp"
         android:onClick="login"
         android:text="Log In"
         android:textStyle="bold" />
