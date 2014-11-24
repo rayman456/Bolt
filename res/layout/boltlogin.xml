@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingBottom="30dp"
-        android:text="Welcome to Bolt!"
+        android:text="@string/welcome"
         android:textColor="#ffffff"
         android:textStyle="bold" />
 
@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:text="Please enter username and password below to login to Bolt."
+        android:text="@string/instructions"
         android:textColor="#ffffff"
         android:textStyle="normal" />
 
@@ -30,7 +30,7 @@
         android:layout_marginBottom="15dp"
         android:background="#ffffff"
         android:ems="10"
-        android:hint="user@domain"
+        android:hint="@string/user_hint"
         android:inputType="textEmailAddress"
         android:paddingBottom="0dp" >
 
@@ -45,7 +45,7 @@
         android:background="#ffffff"
         android:ems="10"
         android:gravity="center_vertical"
-        android:hint="password"
+        android:hint="@string/password_hint"
         android:inputType="textPassword" />
 
     <Button
@@ -53,7 +53,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:onClick="login"
-        android:text="Log In"
+        android:text="@string/user_login"
         android:textStyle="bold" />
 
 </LinearLayout>
