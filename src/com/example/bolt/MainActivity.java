@@ -39,7 +39,9 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
      * The {@link ViewPager} that will host the section contents.
      */
     ViewPager mViewPager;
-    
+    private EditText username = null;
+    private EditText password = null;
+    private Button login;
     Button startChrono;
     Button pauseChrono;
     Chronometer chrono;
