@@ -21,12 +21,12 @@
         android:id="@+id/start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/pause"
-        android:layout_alignBottom="@+id/pause"
-        android:layout_toLeftOf="@+id/time"
-        android:background="#B8B8E6"
         android:gravity="center"
-        android:text="@string/start_run" />
+        android:background="#ff7cb33f"
+        android:text="@string/start_run"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/runningTime" />
 
     <TextView
         android:id="@+id/caloriesBurned"
@@ -43,12 +43,11 @@
         android:id="@+id/runningTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/time"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="23dp"
         android:format="%s"
         android:textColor="#000000"
-        android:textSize="50sp" />
+        android:textSize="50sp"
+        android:layout_below="@+id/time"
+        android:layout_alignStart="@+id/time" />"
 
     <fragment
         android:id="@+id/map"
@@ -93,12 +92,12 @@
         android:id="@+id/pause"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/distanceNumber"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="16dp"
-        android:background="#B8B8E6"
+        android:background="#ff7cb33f"
         android:gravity="center"
-        android:text="@string/pause_run" />
+        android:text="@string/pause_run"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/distanceNumber" />
     
     <TextView
         android:id="@+id/tv_location"
