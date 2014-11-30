@@ -139,7 +139,8 @@ int layout run_mode 0x7f030003
 int menu bolt_login 0x7f090000
 int menu gpstracker 0x7f090001
 int menu main 0x7f090002
-int menu run_mode 0x7f090003
+int menu map_test 0x7f090003
+int menu run_mode 0x7f090004
 int string accept 0x7f050002
 int string action_settings 0x7f050028
 int string app_name 0x7f050023
@@ -186,6 +187,7 @@ int string store_picture_message 0x7f050001
 int string store_picture_title 0x7f050000
 int string title_activity_bolt_login 0x7f050029
 int string title_activity_gpstracker 0x7f050035
+int string title_activity_map_test 0x7f050036
 int string title_activity_run_mode 0x7f050034
 int string title_section1 0x7f050024
 int string title_section2 0x7f050025

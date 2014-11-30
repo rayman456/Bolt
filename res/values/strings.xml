@@ -20,5 +20,6 @@
     <string name="user_login">Log In</string>
     <string name="title_activity_run_mode">RunMode</string>
     <string name="title_activity_gpstracker">GPSTracker</string>
+    <string name="title_activity_map_test">MapTest</string>
 
 </resources>

@@ -462,7 +462,8 @@ containing a value of this type.
         public static final int bolt_login=0x7f090000;
         public static final int gpstracker=0x7f090001;
         public static final int main=0x7f090002;
-        public static final int run_mode=0x7f090003;
+        public static final int map_test=0x7f090003;
+        public static final int run_mode=0x7f090004;
     }
     public static final class string {
         public static final int accept=0x7f050002;
@@ -582,6 +583,7 @@ containing a value of this type.
         public static final int store_picture_title=0x7f050000;
         public static final int title_activity_bolt_login=0x7f050029;
         public static final int title_activity_gpstracker=0x7f050035;
+        public static final int title_activity_map_test=0x7f050036;
         public static final int title_activity_run_mode=0x7f050034;
         public static final int title_section1=0x7f050024;
         public static final int title_section2=0x7f050025;
