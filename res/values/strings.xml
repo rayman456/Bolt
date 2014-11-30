@@ -11,12 +11,14 @@
     <string name="running_time">Time</string>
     <string name="start_run">Start</string>
     <string name="pause_run">Pause</string>
-    <string name="calories_burned">Calories Burned</string>
+    <string name="calories_burned">Cal. Burned</string>
     <string name="distance">Distance</string>
     <string name="welcome">Welcome to Bolt!</string>
     <string name="instructions">Please enter username and password below to login to Bolt.</string>
     <string name="user_hint">user@domain</string>
     <string name="password_hint">password</string>
     <string name="user_login">Log In</string>
-            
+    <string name="title_activity_run_mode">RunMode</string>
+    <string name="title_activity_gpstracker">GPSTracker</string>
+
 </resources>

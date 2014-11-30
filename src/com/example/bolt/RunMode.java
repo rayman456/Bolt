@@ -1,8 +1,14 @@
 package com.example.bolt;
 
 import android.app.Activity;
+import android.app.Dialog;
+import android.location.Criteria;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -10,23 +16,53 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Chronometer;
 
-public class RunMode extends Activity implements OnClickListener {
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.GoogleMap.OnMyLocationChangeListener;
+import com.google.android.gms.maps.LocationSource;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
+
+public class RunMode extends FragmentActivity implements OnClickListener, OnMyLocationChangeListener{
 	Button startChrono;
 	Button pauseChrono;
 	Chronometer chrono;
 	long time = 0;
 	
+	GoogleMap googleMap;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.run_mode);
+		
+		//for chronometer start and pause
 		startChrono = (Button)findViewById(R.id.start);
 		pauseChrono = (Button)findViewById(R.id.pause);
 		chrono = (Chronometer)findViewById(R.id.runningTime);
 		startChrono.setOnClickListener(this);
 		pauseChrono.setOnClickListener(this);
+		
+		int status = GooglePlayServicesUtil.isGooglePlayServicesAvailable(getBaseContext());
+		
+		if(status != ConnectionResult.SUCCESS) {
+			int requestCode = 10;
+			Dialog dialog = GooglePlayServicesUtil.getErrorDialog(status, this, requestCode);
+			dialog.show();
+		}
+		else {
+			SupportMapFragment fm = (SupportMapFragment)getSupportFragmentManager().findFragmentById(R.id.map);
+			googleMap = fm.getMap();
+			googleMap.setMyLocationEnabled(true);
+			googleMap.setOnMyLocationChangeListener(this);
+		}
 	}
-
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -60,5 +96,15 @@ public class RunMode extends Activity implements OnClickListener {
 				chrono.stop();
 				break;
 		}
+	}
+
+	@Override
+	public void onMyLocationChange(Location location) {
+		// TODO Auto-generated method stub
+		double latitude = location.getLatitude();
+		double longitude = location.getLongitude();
+		LatLng latLng = new LatLng(latitude, longitude);
+		googleMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+		googleMap.animateCamera(CameraUpdateFactory.zoomTo(15));
 	}
 }

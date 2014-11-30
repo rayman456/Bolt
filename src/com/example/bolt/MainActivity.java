@@ -39,12 +39,6 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
      * The {@link ViewPager} that will host the section contents.
      */
     ViewPager mViewPager;
-    private EditText username = null;
-    private EditText password = null;
-    private Button login;
-    Button startChrono;
-    Button pauseChrono;
-    Chronometer chrono;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -191,11 +185,4 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
             return rootView;
         }
     }
-    
-    public void login(View view) {
-    	EditText username = (EditText)findViewById(R.id.boltuser);
-    	EditText password = (EditText)findViewById(R.id.boltpassword);
-    	//here the program should check to make sure the username/password match our records.
-    }
-
 }
