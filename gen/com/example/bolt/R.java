@@ -411,7 +411,7 @@ containing a value of this type.
     }
     public static final class id {
         public static final int RelativeLayout1=0x7f0a001b;
-        public static final int action_settings=0x7f0a0025;
+        public static final int action_settings=0x7f0a0026;
         public static final int boltpassword=0x7f0a0018;
         public static final int boltuser=0x7f0a0017;
         public static final int book_now=0x7f0a000e;
@@ -446,6 +446,7 @@ containing a value of this type.
         public static final int strict_sandbox=0x7f0a0009;
         public static final int terrain=0x7f0a0004;
         public static final int time=0x7f0a001c;
+        public static final int tv_location=0x7f0a0025;
         public static final int welcome=0x7f0a0015;
         public static final int wrap_content=0x7f0a000d;
     }

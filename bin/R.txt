@@ -94,7 +94,7 @@ int drawable ic_plusone_tall_off_client 0x7f02001f
 int drawable powered_by_google_dark 0x7f020020
 int drawable powered_by_google_light 0x7f020021
 int id RelativeLayout1 0x7f0a001b
-int id action_settings 0x7f0a0025
+int id action_settings 0x7f0a0026
 int id boltpassword 0x7f0a0018
 int id boltuser 0x7f0a0017
 int id book_now 0x7f0a000e
@@ -129,6 +129,7 @@ int id start 0x7f0a001d
 int id strict_sandbox 0x7f0a0009
 int id terrain 0x7f0a0004
 int id time 0x7f0a001c
+int id tv_location 0x7f0a0025
 int id welcome 0x7f0a0015
 int id wrap_content 0x7f0a000d
 int integer google_play_services_version 0x7f070000
