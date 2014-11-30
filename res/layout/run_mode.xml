@@ -52,7 +52,7 @@
 
     <fragment
         android:id="@+id/map"
-        android:name="com.google.android.gms.maps.MapFragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/start"
@@ -99,5 +99,10 @@
         android:background="#B8B8E6"
         android:gravity="center"
         android:text="@string/pause_run" />
+    
+    <TextView
+        android:id="@+id/tv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>
