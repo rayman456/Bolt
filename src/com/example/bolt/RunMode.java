@@ -18,18 +18,43 @@ import android.support.v4.app.FragmentActivity;
 import android.widget.TextView;
  
 import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesClient;
 import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.location.LocationClient;
+import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 
-public class RunMode extends FragmentActivity implements OnClickListener, LocationListener {
+import android.content.IntentSender;
+import android.location.Address;
+import android.location.Geocoder;
+import android.os.AsyncTask;
+import android.os.Build;
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.support.v4.app.DialogFragment;
+import android.util.Log;
+import android.widget.ProgressBar;
+import android.widget.Toast;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
+
+public class RunMode extends FragmentActivity implements OnClickListener, LocationListener, GooglePlayServicesClient.ConnectionCallbacks, GooglePlayServicesClient.OnConnectionFailedListener {
 	GoogleMap googleMap;
 	Button startChrono;
 	Button pauseChrono;
 	Chronometer chrono;
 	long time = 0;
+	
+	private LocationRequest mLocationRequest;
+	private LocationClient mLocationClient;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +96,8 @@ public class RunMode extends FragmentActivity implements OnClickListener, Locati
             }
             
             locationManager.requestLocationUpdates(provider, 20000, 0, this);
+            
+            kickStardedLocationManager();
         }
 	}
 	
@@ -141,4 +168,47 @@ public class RunMode extends FragmentActivity implements OnClickListener, Locati
 	public void onProviderDisabled(String provider) {
 		// TODO Auto-generated method stub	
 	}
+
+	@Override
+	public void onConnected(Bundle arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onDisconnected() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onConnectionFailed(ConnectionResult arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	private void kickStardedLocationManager(){
+
+		 // Acquire a reference to the system Location Manager
+		    LocationManager locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
+
+		 // Define a listener that responds to location updates
+		    android.location.LocationListener locationListener = new android.location.LocationListener() {
+		        public void onLocationChanged(Location location) {
+		          // Called when a new location is found by the network location provider.
+		            //MainActivity.this.makeUseOfNewLocation(location);
+		        }
+
+		        public void onStatusChanged(String provider, int status, Bundle extras) {}
+
+		        public void onProviderEnabled(String provider) {}
+
+		        public void onProviderDisabled(String provider) {}
+		      };
+
+		      long l = 10;
+		      float f = 100;
+		   // Register the listener with the Location Manager to receive location updates
+		      locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener); //LocationManager.GPS_PROVIDER
+		}
 }
